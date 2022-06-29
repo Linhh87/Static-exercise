@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Exercise</title>
+</head>
+<body>
+    <script>
+        class Triple {
+            static customName = 'Tripler';
+            static description = 'I triple any number you provide';
+            static calculate(n = 1) {
+                return n * 3;
+            }
+        }
+        console.log(Triple.calculate(4))
+        class Square extends Triple{
+            static longDescription;
+            static description = 'I am a square with n as my side';
+            static calculateArea (n) {
+                return super.calculate(n) * super.calculate(n);
+            }
+        }
+        console.log(Square.calculateArea(3))
+    </script>
+</body>
+</html>
